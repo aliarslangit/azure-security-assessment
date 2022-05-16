@@ -11,4 +11,5 @@ foreach ( $azNsg in $azNsgs ) {
     @{label = 'Resource Group Name'; expression = { $azNsg.ResourceGroupName } } | Export-Csv -Path "$($home)\clouddrive\nsg-audit.csv" -NoTypeInformation -Append
   
 }
+$vms = Get-AzVirtualMachine
 
